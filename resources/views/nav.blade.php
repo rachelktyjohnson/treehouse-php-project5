@@ -7,20 +7,20 @@
     </a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active" style="color: hotpink;">
-                <a class="nav-link" href="/"><b>Home</b></a>
-            </li>
-            <li class="nav-item" style="color: hotpink;">
-                <a class="nav-link" href="/cats"><b>Cats</b></a>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::path() === '/' ? 'active' : '' }}" href="/"><b>Home</b></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/dogs"><b>Dogs</b></a>
+                <a class="nav-link {{ Request::path() === 'cats' ? 'active' : '' }}" href="/cats"><b>Cats</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::path() === 'dogs' ? 'active' : '' }}" href="/dogs"><b>Dogs</b></a>
             </li>
 
         </ul>
         <ul class="navbar-nav float-right">
             <li class="nav-item">
-                <a class="nav-link" style="color: hotpink;"  href="https://www.petfinder.com/" target="_blank"><b>Pet Adoption</b></a>
+                <a class="nav-link"  href="https://www.petfinder.com/" target="_blank"><b>Pet Adoption</b></a>
             </li>
         </ul>
         </div>
